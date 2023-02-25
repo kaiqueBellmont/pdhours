@@ -1,13 +1,14 @@
 import styles from './Home.module.css'
 
-// import { useNavigate } from 'react-router-dom';
+
+import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
-  // function handleCriarUsuario() {
-  //   navigate("/criarusuario");
-  // }
+  function handleCreateUser() {
+    navigate("/createuser");
+  }
 
   // function handleAlgumaOutraAcao() {
   //   navigate("/algumaoutraacao");
@@ -27,7 +28,7 @@ export default function Home() {
           <h3 className={styles.modal_content_title}>Ações Disponíveis</h3>
           <div className="d-grid gap-2 mt-3">
             <button
-              // onClick={handleCriarUsuario}
+              onClick={handleCreateUser}
               className="btn btn-primary"
             >
               Criar Usuário
