@@ -4,12 +4,17 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
+    background-color: whitesmoke;
+}
+
+.main_container img {
+    width: 100px;
+    height: 100px;
 }
 
 .modal {
     width: 420px;
     box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
-    padding-top: 30px;
     padding-bottom: 20px;
     border-radius: 8px;
     background-color: white;
@@ -21,14 +26,25 @@
 }
 
 .modal_content_title {
+
+    margin-top: 30px;
     text-align: center;
     margin-bottom: 1em;
-    font-size: 24px;
-    color: red;
+    font-size: 50px;
+    color: black;
     font-weight: 800;
+    font-family: 'Roboto';
+
 }
 
 .modal button {
     margin-top: 10px;
     margin-bottom: 10px;
+    padding: 12px 24px;
+    font-weight: bold ;
+    font-size: larger;
+    text-align: center;
+    justify-content: center;
+    height: 70px;
+    /* altura ajustável */
 }

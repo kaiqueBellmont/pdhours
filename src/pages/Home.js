@@ -1,4 +1,4 @@
-import styles from './Home.css'
+import styles from './Home.module.css'
 
 // import { useNavigate } from 'react-router-dom';
 
@@ -18,10 +18,13 @@ export default function Home() {
   // }
 
   return (
+
     <div className={styles.main_container}>
       <div className={styles.modal}>
+        <img src="logoempresa.svg" alt="" />
+
         <div className={styles.modal_content}>
-          <h3 className={styles.modal_content_title}>Ações</h3>
+          <h3 className={styles.modal_content_title}>Ações Disponíveis</h3>
           <div className="d-grid gap-2 mt-3">
             <button
               // onClick={handleCriarUsuario}
@@ -33,10 +36,10 @@ export default function Home() {
               // onClick={handleAlgumaOutraAcao}
               className="btn btn-primary"
             >
-              Alguma Outra Ação
+              Criar lançamento
             </button>
             <button className="btn btn-primary">
-              Mais Uma Ação
+              Criar equipe
             </button>
           </div>
         </div>
