@@ -1,4 +1,4 @@
-import styles from '/home/kaique/projects/pdhours/src/pages/Home.css'
+import styles from './Home.css'
 
 // import { useNavigate } from 'react-router-dom';
 
