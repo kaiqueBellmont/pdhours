@@ -1,0 +1,112 @@
+.main_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: whitesmoke;
+  }
+  
+  .main_container img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .form {
+    width: 420px;
+    box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-radius: 20px;
+    background-color: white;
+  
+  }
+  
+  .form_content {
+    padding-left: 12%;
+    padding-right: 12%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .form_content label {
+    color: #ACB5BD;
+    text-transform: uppercase;
+    text-align: start;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .form_content button {
+    display: block;
+    margin: 10px auto 0;
+    width: 200px;
+    height: 50px;
+    background-color: #4263EB;
+    
+  }
+  
+  .form_title {
+    text-align: center;
+    margin-bottom: 2em;
+    font-size: 34px;
+    color: rgb(34, 34, 34);
+    font-weight: 6500;
+    font-style: normal;
+  }
+  
+  .form_content input::placeholder {
+    color: #DDE2E5;
+    font-size: 16px;
+  }
+  
+  .form_content input {
+    font-size: 15px;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 23px;
+    border: 1px solid #DDE2E5;
+  }
+  
+  
+  .error_message {
+    display: flex;
+    align-items: center;
+    justify-content: baseline; 
+    background-color: rgb(255, 220, 220);
+    color: #ffadad;
+    border-radius: 8px;
+    padding: 11px;
+    position: relative;
+    text-align: justify;
+  }
+  
+  .x {
+    color: rgb(39, 39, 39);
+    padding-left: 10px;
+  }
+  
+  .icon_error {
+    align-items: start;
+    color: red;
+    padding-right: 5px;
+    position: relative;
+    padding-bottom: 5px;
+  }
+  
+  .span_text {
+    color: red;
+    font-size: 15px;
+    font-family: Arial;
+  }
+  
+  .squad_error input{
+    border: 1px solid;
+    border-color: red;
+    border-radius: 6px;
+  }
+  
+  .form-control {
+    height: 100px;
+  }

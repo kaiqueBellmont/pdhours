@@ -10,13 +10,17 @@ export default function Home() {
     navigate("/createuser");
   }
 
-  // function handleAlgumaOutraAcao() {
-  //   navigate("/algumaoutraacao");
-  // }
+  function handleCreateLaunch() {
+    navigate("/createlaunch");
+  }
 
-  // function handleMaisUmaAcao() {
-  //   navigate("/maisumaacao");
-  // }
+  function handleCreateSquad() {
+    navigate("/createSquad");
+  }
+
+  function handleMainpage() {
+    navigate("/mainpage");
+  }
 
   return (
 
@@ -34,14 +38,23 @@ export default function Home() {
               Criar Usuário
             </button>
             <button
-              // onClick={handleAlgumaOutraAcao}
+              onClick={handleCreateLaunch}
               className="btn btn-primary"
             >
               Criar lançamento
             </button>
-            <button className="btn btn-primary">
+            <button
+              onClick={handleCreateSquad}
+              className="btn btn-primary">
               Criar equipe
             </button>
+
+            <button
+              onClick={handleMainpage}
+              className="btn btn-primary">
+              Main Page
+            </button>
+
           </div>
         </div>
       </div>

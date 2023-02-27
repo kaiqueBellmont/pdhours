@@ -19,7 +19,7 @@
   padding-bottom: 80px;
   border-radius: 20px;
   background-color: white;
-  
+
 }
 
 .form_content {
@@ -40,9 +40,10 @@
 
 .form_content button {
   display: block;
-  margin:10px auto 0;
+  margin: 10px auto 0;
   width: 200px;
-  height: 50px;  
+  height: 50px;
+  background-color: #4263EB;
 }
 
 .form_title {
@@ -64,5 +65,47 @@
   width: 100%;
   padding: 12px;
   margin-bottom: 23px;
+  border: 1px solid #DDE2E5;
 }
 
+
+.error_message {
+  display: flex;
+  align-items: center;
+  justify-content: baseline; 
+  background-color: rgb(255, 220, 220);
+  color: #ffadad;
+  border-radius: 8px;
+  padding: 11px;
+  position: relative;
+  text-align: justify;
+}
+
+.x {
+  color: rgb(39, 39, 39);
+  padding-left: 24px;
+}
+
+.icon_error {
+  align-items: start;
+  color: red;
+  padding-right: 10px;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.span_text {
+  color: red;
+  font-size: 14px;
+  font-family: Arial;
+}
+
+.squad_error input{
+  border: 1px solid;
+  border-color: red;
+  border-radius: 6px;
+}
+
+.squad_error_input::placeholder {
+  color: black;
+}
