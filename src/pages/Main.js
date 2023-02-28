@@ -1,48 +1,60 @@
-import * as React from "react";
-import "./App.css";
-import emoji from "../../public/assets/emoji.svg";
-import rectangle from "../../public/assets/rectangle.svg";
-import union from "../../public/assets/union.svg";
-import rectangle1 from "../../public/assets/rectangle1.svg";
-
-import Button from "../components";
-import CardFrame from "../components/CardFrame";
+import styles from './Main.module.css'
+import { useState } from 'react';
 
 
-export default function Main(){
-  const propsData = {
-    button1: {
-      primary: "Lançar horas",
-    },
-    frame1: {
-      button: {
-        primary: "Criar squad",
-      },
-      emoji: emoji,
-      nenhumaSquadCadast:
-        "Nenhuma squad cadastrada. Crie uma squad para come\xe7ar.",
-    },
+import union from "../assets/union.svg";
+
+// import CardFrame from "../components/CardFrame";
+import SquadsTable from '../components/SquadsTable';
+
+export default function Main() {
+  const [activeTab, setActiveTab] = useState('Squads');
+
+  const handleSquadsClick = () => {
+    setActiveTab('Squads');
   };
+
+  const handleUsersClick = () => {
+    setActiveTab('Usuários');
+  };
+
   return (
-    <div className="squads-empty">
-      <div className="flex-container">
-        <img className="union" src={union} />
-        <span className="interface-para-lanam">
-          Interface para lançamento de horas
+    <div className={styles.squads_empty}>
+      <div className={styles.flex_container}>
+        <img className="union" src={union} alt="" />
+      </div>
+      <div className={styles.flex_container_1}>
+        <span className={styles.pd_hours}>PD Hours</span>
+        <button type="submit" className="btn btn-primary">
+          Lançar horas
+        </button>
+      </div>
+      <div className={styles.flex_container_2}>
+        <span
+          className={`${styles.squads} ${activeTab === 'Squads' ? styles.activeTab : ''
+            }`}
+          onClick={handleSquadsClick}
+        >
+          {activeTab === 'Squads' ? <b>Squads</b> : 'Squads'}
+        </span>
+        <span
+          className={`${styles.users} ${activeTab === 'Usuários' ? styles.activeTab : ''
+            }`}
+          onClick={handleUsersClick}
+        >
+          {activeTab === 'Usuários' ? <b>Usuários</b> : 'Usuários'}
         </span>
       </div>
-      <div className="flex-container-1">
-        <span className="pd-hours">PD Hours</span>
-        <Button className="button-1-instance-1" {...propsData.button1} />
-      </div>
-      <div className="flex-container-2">
-        <span className="squads">Squads</span>
-        <span>Usuários</span>
-      </div>
-      <img className="rectangle-51" src={rectangle1} />
-      <div className="rectangle-5">
-        <img className="rectangle-3" src={rectangle} />
-        <CardFrame className="frame-1-instance-1" {...propsData.frame1} />
+      <div className={styles.rectangle_5}>
+        <div className={styles.rectangle_3}>
+        </div>
+        <div>
+          <h2 className={styles.squad_list_title}>
+            Lista de squads
+          </h2>
+        </div>
+        <SquadsTable/>
+        {/* <CardFrame className={styles.frame_1_instance_1} /> */}
       </div>
     </div>
   );
